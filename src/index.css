@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  font-family: "Quattrocento Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.login-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./assets/loginimage.jpg");
+
+  /* Full height */
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Chip Styles */
+
+.text-success {
+  color: #4caf50 !important;
+}
+
+.text-rejected {
+  color: #f44336 !important;
+}
+
+.text-pending {
+  color: #ff9800 !important;
+}
+
+.c-text-sky {
+  color: #7ed4f7 !important;
+}
+
+.chip-success-outline {
+  border: 1px solid #137333;
+}
+
+.chip-danger-outline {
+  border: 1px solid #f44336;
+}
+
+.chip-warning-outline {
+  border: rgb(230, 140, 24);
+}
+
+.chip-success {
+  color: #137333;
+  background-color: #e6f4ea;
+}
+
+.chip-danger {
+  color: #f44336;
+  background-color: rgb(245, 227, 226);
+}
+
+.chip-warning {
+  color: rgb(230, 140, 24);
+  background-color: #f8e6bf;
+}
+
+.chip-dark {
+  color: rgb(16, 20, 20);
+  background-color: #e5e5e5;
+}
+
+.chip-sky {
+  color: #14b0ee;
+  background-color: #e3f4fa;
+}
+
+.c-bg-success {
+  background-color: #4caf50;
+}
+
+.c-bg-pending {
+  background-color: #ff9800;
+}
+
+.c-bg-danger {
+  background-color: #f44336;
+}
+
+.c-bg-sky {
+  background-color: #7ed4f7;
+}
+
+.custom-chip {
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  -grid-column-align: end;
+  justify-self: end;
+  letter-spacing: 0.5px;
+  margin-right: 5px;
+  padding: 4px 6px;
+  text-transform: uppercase;
+  display: inline-flex;
+  flex-grow: 0;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  justify-content: center;
+}
+
+.d-flex {
+  display: flex;
+}
+.companycard {
+  height: 250px;
+  background-color: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0 3px 8px 2px rgb(0 0 0 / 10%); */
+  /* border-bottom: 3px solid #27ae60; */
+}
+
+.companylogo {
+  border-radius: 10px;
+  box-shadow: 0 3px 8px 2px rgb(0 0 0 / 10%);
+  height: 150px;
+  background-color: white;
+}
+.companyimage {
+  margin-left: 20px;
+  height: 80px;
+  margin-top: 20px;
+  width: 150px;
+  /* width: 10px; */
+}
+
+.companyname {
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.companypanel {
+  /* align-items: center;
+  flex-direction: column; */
+  /* text-align: center; */
+  /* margin-top: 30px;  */
+}
+
+.c-pointer{
+  cursor: pointer;
+}
+
+.show-border{
+  border: 1px solid black;
+}
