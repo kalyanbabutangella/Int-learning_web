@@ -18,7 +18,7 @@ const initialState = {
   },
   graph_data: {
     isLoading: false,
-    data: [],
+    data: {},
     error: "",
   },
   leader_board: {

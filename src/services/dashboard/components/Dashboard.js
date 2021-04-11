@@ -2,7 +2,11 @@ import { Grid } from "@material-ui/core"
 import PropTypes from "prop-types"
 import React, { useEffect } from "react"
 import { connect } from "react-redux"
-import { loadUpcomingLessions } from "../middleware"
+import {
+  loadGraphData,
+  loadMyCourses,
+  loadUpcomingLessions,
+} from "../middleware"
 import Graph from "./Graph"
 import Homework from "./Homework"
 import LeaderBoard from "./LeaderBoard"
@@ -11,25 +15,27 @@ import Tasks from "./Tasks"
 import UpComingLessions from "./UpComingLessions"
 
 const Dashboard = (props) => {
-  const { load_upcoming_lessions } = props
+  const { load_upcoming_lessions, load_my_courses, load_graph_data } = props
 
   useEffect(() => {
     load_upcoming_lessions()
+    load_my_courses()
+    load_graph_data()
   }, [])
   return (
     <div>
-      <Grid container spacing={5}>
+      <Grid className="bg-grey" container>
         <Grid item xs={12}>
-          <Grid container spacing={2}>
+          <Grid container>
             <UpComingLessions />
             <Tasks />
             <LeaderBoard />
           </Grid>
         </Grid>
         <Grid item xs={12}>
-          <Grid container spacing={2}>
+          <Grid container>
             <Grid item xs={12} sm={8}>
-              <Grid container spacing={2}>
+              <Grid container>
                 <MyCourses />
                 <Graph />
               </Grid>
@@ -44,6 +50,8 @@ const Dashboard = (props) => {
 
 Dashboard.propTypes = {
   dashboard: PropTypes.object,
+  load_graph_data: PropTypes.func,
+  load_my_courses: PropTypes.func,
   load_upcoming_lessions: PropTypes.func,
 }
 
@@ -53,6 +61,8 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = {
   load_upcoming_lessions: loadUpcomingLessions,
+  load_my_courses: loadMyCourses,
+  load_graph_data: loadGraphData,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)
