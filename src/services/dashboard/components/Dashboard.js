@@ -4,7 +4,9 @@ import React, { useEffect } from "react"
 import { connect } from "react-redux"
 import {
   loadGraphData,
+  loadHomework,
   loadMyCourses,
+  loadTasks,
   loadUpcomingLessions,
 } from "../middleware"
 import Graph from "./Graph"
@@ -15,12 +17,20 @@ import Tasks from "./Tasks"
 import UpComingLessions from "./UpComingLessions"
 
 const Dashboard = (props) => {
-  const { load_upcoming_lessions, load_my_courses, load_graph_data } = props
+  const {
+    load_upcoming_lessions,
+    load_my_courses,
+    load_graph_data,
+    load_homework,
+    load_tasks,
+  } = props
 
   useEffect(() => {
     load_upcoming_lessions()
     load_my_courses()
     load_graph_data()
+    load_homework()
+    load_tasks()
   }, [])
   return (
     <div>
@@ -51,8 +61,10 @@ const Dashboard = (props) => {
 Dashboard.propTypes = {
   dashboard: PropTypes.object,
   load_graph_data: PropTypes.func,
+  load_homework: PropTypes.func,
   load_my_courses: PropTypes.func,
   load_upcoming_lessions: PropTypes.func,
+  load_tasks: PropTypes.func,
 }
 
 const mapStateToProps = (state) => ({
@@ -63,6 +75,8 @@ const mapDispatchToProps = {
   load_upcoming_lessions: loadUpcomingLessions,
   load_my_courses: loadMyCourses,
   load_graph_data: loadGraphData,
+  load_homework: loadHomework,
+  load_tasks: loadTasks,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)

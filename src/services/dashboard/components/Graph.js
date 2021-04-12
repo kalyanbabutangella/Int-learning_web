@@ -8,7 +8,8 @@ const Graph = (props) => {
   const { graph_data } = props.dashboard
   if (graph_data.isLoading) return "Loading"
   return (
-    <Grid className="show-border" item xs={12}>
+    <Grid className="show-border" item xs={8}>
+      <div className="c-title">Performance</div>
       <Line data={graph_data.data} />
     </Grid>
   )

@@ -185,6 +185,36 @@ export default (state = initialState, { type, payload }) => {
         },
       }
 
+    case ACTION.LOAD_HOMEWORK_REQ:
+      return {
+        ...state,
+        home_work: {
+          ...state.home_work,
+          isLoading: true,
+          error: "",
+        },
+      }
+
+    case ACTION.LOAD_HOMEWORK_SUCCESS:
+      return {
+        ...state,
+        home_work: {
+          ...state.home_work,
+          isLoading: false,
+          data: payload,
+        },
+      }
+
+    case ACTION.LOAD_HOMEWORK_FAILURE:
+      return {
+        ...state,
+        home_work: {
+          ...state.home_work,
+          isLoading: false,
+          error: payload,
+        },
+      }
+
     default:
       return state
   }

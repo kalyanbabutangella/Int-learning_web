@@ -69,3 +69,17 @@ export const loadLeaderBoardFailure = (payload) => ({
   type: ACTION.LOAD_LEADERBOARD_FAILURE,
   payload,
 })
+
+export const loadHomeworkReq = () => ({
+  type: ACTION.LOAD_HOMEWORK_REQ,
+})
+
+export const loadHomeworkSuccess = (payload) => ({
+  type: ACTION.LOAD_HOMEWORK_SUCCESS,
+  payload,
+})
+
+export const loadHomeworkFailure = (payload) => ({
+  type: ACTION.LOAD_HOMEWORK_FAILURE,
+  payload,
+})

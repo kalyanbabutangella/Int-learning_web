@@ -2,11 +2,11 @@ import PropTypes from "prop-types"
 import React from "react"
 
 function WarningChip(props) {
-  return <span className="custom-chip chip-warning">{props.Label}</span>
+  return <span className="custom-chip chip-warning">{props.children}</span>
 }
 
 WarningChip.propTypes = {
-  Label: PropTypes.string,
+  children: PropTypes.string,
 }
 
 export default WarningChip

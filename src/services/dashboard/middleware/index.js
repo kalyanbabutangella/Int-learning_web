@@ -5,6 +5,10 @@ import {
   loadMyCoursesSuccess,
   loadUpcomingLessonsReq,
   loadUpcomingLessonsSuccess,
+  loadHomeworkReq,
+  loadHomeworkSuccess,
+  loadTasksReq,
+  loadTasksSuccess,
 } from "../actions/actionCreators"
 
 export const loadUpcomingLessions = () => (dispatch) => {
@@ -51,6 +55,45 @@ export const loadMyCourses = () => (dispatch) => {
   }, 1300)
 }
 
+export const loadHomework = () => (dispatch) => {
+  dispatch(loadHomeworkReq())
+  setTimeout(() => {
+    const payload = [
+      {
+        title: "Basics of algebra",
+        deadline: "05.09.2019",
+        progress: 80,
+      },
+      {
+        title: "Chemical bonding",
+        deadline: "04.09.2019",
+        progress: 90,
+      },
+      {
+        title: "Problems on statistics",
+        deadline: "14.09.2019",
+        progress: 100,
+      },
+      {
+        title: "Molecular Orbital Theory",
+        deadline: "15.09.2019",
+        progress: 80,
+      },
+      // {
+      //   title: "Thermodynamics",
+      //   deadline: "16.09.2019",
+      //   progress: 90,
+      // },
+      // {
+      //   title: "Binomial Theorem",
+      //   deadline: "17.09.2019",
+      //   progress: 72,
+      // },
+    ]
+    dispatch(loadHomeworkSuccess(payload))
+  }, 1000)
+}
+
 export const loadGraphData = () => (dispatch) => {
   dispatch(loadGraphDataReq())
   setTimeout(() => {
@@ -83,4 +126,31 @@ export const loadGraphData = () => (dispatch) => {
 
     dispatch(loadGraphDataSuccess(data))
   }, 700)
+}
+
+export const loadTasks = () => (dispatch) => {
+  dispatch(loadTasksReq())
+  setTimeout(() => {
+    const payload = [
+      {
+        title: "Practice calculus problems",
+        tags: ["Calculus", "Mathematics"],
+        createdAt: "12 Apr",
+        id: 0,
+      },
+      {
+        title: "Bonding structure",
+        tags: ["Bond", "Chemistry"],
+        createdAt: "13 Apr",
+        id: 1,
+      },
+      {
+        title: "Force equations",
+        tags: ["Force", "Physics"],
+        createdAt: "14 Apr",
+        id: 2,
+      },
+    ]
+    dispatch(loadTasksSuccess(payload))
+  }, 1200)
 }
