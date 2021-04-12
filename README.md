@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Hosted on Firebase
 
-Link => https://int-learning-web.web.app/dashboard
+Link => https://int-learning-web.web.app/
 
 
 ## Packages Used
