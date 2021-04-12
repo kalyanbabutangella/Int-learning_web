@@ -37,7 +37,7 @@ const Dashboard = (props) => {
   }, [])
   return (
     <div>
-      <Grid className="bg-grey" container>
+      <Grid className="bg-grey" container spacing={3}>
         <Grid item xs={12}>
           <Grid container>
             <UpComingLessions />
@@ -47,7 +47,7 @@ const Dashboard = (props) => {
         </Grid>
         <Grid item xs={12}>
           <Grid container>
-            <Grid item xs={12} sm={8}>
+            <Grid item xs={12} sm={7}>
               <Grid container>
                 <MyCourses />
                 <Graph />

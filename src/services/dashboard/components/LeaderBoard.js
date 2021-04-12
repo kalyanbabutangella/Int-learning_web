@@ -38,7 +38,7 @@ const LeaderBoard = (props) => {
     )
   }
   return (
-    <Grid className="show-border " item xs={12} sm={4}>
+    <Grid className="show-border " item xs={12} sm={6} md={6} lg={3} style={{ marginTop: "10px" }}>
       <div className="c-title"> Leader Board</div>
       {leader_board.data.map((student) => {
         return <LeaderBoardCard key={student.id} {...student} />

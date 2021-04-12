@@ -1,11 +1,11 @@
 import ListItem from "@material-ui/core/ListItem"
 import ListItemIcon from "@material-ui/core/ListItemIcon"
 import ListItemText from "@material-ui/core/ListItemText"
-import ErrorIcon from "@material-ui/icons/Error"
+import ChromeReaderModeIcon from "@material-ui/icons/ChromeReaderMode"
 import GroupWorkIcon from "@material-ui/icons/GroupWork"
 import NotificationsActiveIcon from "@material-ui/icons/NotificationsActive"
-import PeopleIcon from "@material-ui/icons/People"
-import PostAddIcon from "@material-ui/icons/PostAdd"
+import DashboardIcon from "@material-ui/icons/Dashboard"
+import SubjectIcon from "@material-ui/icons/Subject"
 import React from "react"
 
 export const MainListItems = () => {
@@ -20,21 +20,21 @@ export const MainListItems = () => {
         </ListItem>
         <ListItem button className="hover">
           <ListItemIcon>
-            <PeopleIcon style={{ color: "#fc9c86" }} />
+            <DashboardIcon style={{ color: "#fc9c86" }} />
           </ListItemIcon>
           <ListItemText primary="Dashboard" />
         </ListItem>
         <ListItem button className="hover">
           <ListItemIcon>
-            <PostAddIcon style={{ color: "#11cdef" }} />
+            <SubjectIcon style={{ color: "#11cdef" }} />
           </ListItemIcon>
-          <ListItemText primary="Link Document" />
+          <ListItemText primary="My Courses" />
         </ListItem>
         <ListItem button className="hover">
           <ListItemIcon>
-            <ErrorIcon style={{ color: "#607d8b" }} />
+            <ChromeReaderModeIcon style={{ color: "#607d8b" }} />
           </ListItemIcon>
-          <ListItemText primary="Cases" />
+          <ListItemText primary="Achievements" />
         </ListItem>
       </div>
     </div>

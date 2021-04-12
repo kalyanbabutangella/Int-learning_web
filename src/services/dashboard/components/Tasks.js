@@ -44,7 +44,15 @@ const Tasks = (props) => {
     )
   }
   return (
-    <Grid className="show-border" item xs={12} sm={4}>
+    <Grid
+      className="show-border"
+      item
+      xs={12}
+      sm={5}
+      md={5}
+      lg={4}
+      style={{ marginRight: "10px", marginTop: "10px" }}
+    >
       <div className="c-title">Tasks</div>
       {tasks.data.map((task) => {
         return <TaskCard key={task.id} {...task} />

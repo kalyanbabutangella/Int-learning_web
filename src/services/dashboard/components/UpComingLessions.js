@@ -42,7 +42,15 @@ const UpComingLessions = (props) => {
   }
 
   return (
-    <Grid className="show-border" item xs={12} sm={4}>
+    <Grid
+      className="show-border"
+      item
+      xs={12}
+      sm={6}
+      md={6}
+      lg={4}
+      style={{ marginRight: "10px", marginTop: "10px" }}
+    >
       <div className="c-title">Upcoming Lessons</div>
       {up_coming_lessons.data.map((lesson) => {
         return <UpcomingLessonsCard key={lesson.id} {...lesson} />

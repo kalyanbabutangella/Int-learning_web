@@ -95,6 +95,9 @@ const useStyles = makeStyles((theme) => ({
   container: {
     paddingTop: theme.spacing(4),
     paddingBottom: theme.spacing(4),
+    // paddingLeft: 0,
+    // paddingRight: 0,
+    // maxWidth: 0,
   },
   paper: {
     padding: theme.spacing(2),
@@ -150,20 +153,11 @@ export default function Dashboard() {
             color="inherit"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
-            className={clsx(
-              classes.menuButton,
-              open && classes.menuButtonHidden
-            )}
+            className={clsx(classes.menuButton, open && classes.menuButtonHidden)}
           >
             <MenuIcon />
           </IconButton>
-          <Typography
-            component="h1"
-            variant="h6"
-            color="inherit"
-            noWrap
-            className={classes.title}
-          >
+          <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Dashboard
           </Typography>
           <IconButton color="inherit">
@@ -186,8 +180,7 @@ export default function Dashboard() {
               onClose={handleClose}
               className={classes.dropDown}
             >
-              <MenuItem onClick={handleClose}>Switch Company</MenuItem>
-              <MenuItem onClick={handleClose}>Console</MenuItem>
+              <MenuItem onClick={handleClose}>Profile</MenuItem>
               <MenuItem onClick={handleClose}>Logout</MenuItem>
             </Menu>
           </div>
@@ -212,17 +205,13 @@ export default function Dashboard() {
           >
             <img
               className={classes.companyLogo}
-              src={
-                "https://internshala.com/cached_uploads/logo%2F5f8d3827570411603090471.png"
-              }
+              src={"https://internshala.com/cached_uploads/logo%2F5f8d3827570411603090471.png"}
             />
           </div>
           <IconButton onClick={handleDrawerClose}>
             <ChevronLeftIcon />
           </IconButton>
         </div>
-
-        <Divider />
         <List>
           <MainListItems />
         </List>
@@ -233,7 +222,7 @@ export default function Dashboard() {
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
-        <Container maxWidth="lg" className={classes.container}>
+        <Container className={classes.container}>
           {routes.map(({ path, component }) => {
             return <Route key={path} exact path={path} component={component} />
           })}

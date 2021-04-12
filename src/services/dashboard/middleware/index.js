@@ -39,7 +39,7 @@ export const loadUpcomingLessions = () => (dispatch) => {
         subject: "Physics",
         date: "07.09.2019",
         time: "3:00PM",
-        pic: "https://cdn4.iconfinder.com/data/icons/education-759/2050/Education_flat-05-512.png",
+        pic: "https://www.pngkey.com/png/full/1-10081_violet-atom-logo-3-physics-clipart.png",
       },
     ]
     dispatch(loadUpcomingLessonsSuccess(payload))
@@ -79,15 +79,13 @@ export const loadMyCourses = () => (dispatch) => {
   setTimeout(() => {
     const payload = [
       {
-        image:
-          "https://cdn4.iconfinder.com/data/icons/business-1221/24/Calculator-512.png",
+        image: "https://cdn4.iconfinder.com/data/icons/business-1221/24/Calculator-512.png",
         subject_name: "Maths",
         no_of_lessons: 30,
         id: 0,
       },
       {
-        image:
-          "https://www.pngkey.com/png/full/1-10081_violet-atom-logo-3-physics-clipart.png",
+        image: "https://www.pngkey.com/png/full/1-10081_violet-atom-logo-3-physics-clipart.png",
         subject_name: "Physics",
         no_of_lessons: 32,
         id: 1,
@@ -97,6 +95,13 @@ export const loadMyCourses = () => (dispatch) => {
           "https://cdn4.iconfinder.com/data/icons/education-759/2050/Education_flat-05-512.png",
         subject_name: "Chemistry",
         no_of_lessons: 28,
+        id: 2,
+      },
+      {
+        image:
+          "https://cdn3.iconfinder.com/data/icons/education-and-learning-set-2-1/256/76-512.png",
+        subject_name: "English",
+        no_of_lessons: 29,
         id: 2,
       },
     ]
