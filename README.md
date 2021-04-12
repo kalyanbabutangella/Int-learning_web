@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Hosted on Firebase
+
+Link => https://int-learning-web.web.app/dashboard
+
 
 ## Packages Used
 
@@ -9,6 +13,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 2.Charts.js
 3.Redux
 4.React Router Dom
+5.Firebase
 
 ## Available Scripts
 
