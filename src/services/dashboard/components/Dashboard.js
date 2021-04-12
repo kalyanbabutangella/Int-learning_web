@@ -8,6 +8,7 @@ import {
   loadMyCourses,
   loadTasks,
   loadUpcomingLessions,
+  loadleaderboard,
 } from "../middleware"
 import Graph from "./Graph"
 import Homework from "./Homework"
@@ -23,6 +24,7 @@ const Dashboard = (props) => {
     load_graph_data,
     load_homework,
     load_tasks,
+    load_leaderboard,
   } = props
 
   useEffect(() => {
@@ -31,6 +33,7 @@ const Dashboard = (props) => {
     load_graph_data()
     load_homework()
     load_tasks()
+    load_leaderboard()
   }, [])
   return (
     <div>
@@ -65,6 +68,7 @@ Dashboard.propTypes = {
   load_my_courses: PropTypes.func,
   load_upcoming_lessions: PropTypes.func,
   load_tasks: PropTypes.func,
+  load_leaderboard: PropTypes.func,
 }
 
 const mapStateToProps = (state) => ({
@@ -77,6 +81,7 @@ const mapDispatchToProps = {
   load_graph_data: loadGraphData,
   load_homework: loadHomework,
   load_tasks: loadTasks,
+  load_leaderboard: loadleaderboard,
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dashboard)

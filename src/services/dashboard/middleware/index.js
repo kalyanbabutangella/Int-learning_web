@@ -9,6 +9,8 @@ import {
   loadHomeworkSuccess,
   loadTasksReq,
   loadTasksSuccess,
+  loadLeaderBoardReq,
+  loadLeaderBoardSuccess,
 } from "../actions/actionCreators"
 
 export const loadUpcomingLessions = () => (dispatch) => {
@@ -16,14 +18,61 @@ export const loadUpcomingLessions = () => (dispatch) => {
   setTimeout(() => {
     const payload = [
       {
-        title: "Algebra - II",
-        subject_name: "Maths",
-        time: 1618083838880,
+        topic: "Algebra - II",
+        id: 0,
+        subject: "Maths",
+        date: "05.09.2019",
+        time: "2:00PM",
+        pic: "https://cdn4.iconfinder.com/data/icons/business-1221/24/Calculator-512.png",
+      },
+      {
+        topic: "Atomic Structure",
+        subject: "Chemistry",
+        id: 1,
+        date: "06.09.2019",
+        time: "1:00PM",
+        pic: "https://cdn4.iconfinder.com/data/icons/education-759/2050/Education_flat-05-512.png",
+      },
+      {
+        topic: "Kinematics",
+        id: 2,
+        subject: "Physics",
+        date: "07.09.2019",
+        time: "3:00PM",
+        pic: "https://cdn4.iconfinder.com/data/icons/education-759/2050/Education_flat-05-512.png",
       },
     ]
     dispatch(loadUpcomingLessonsSuccess(payload))
   }, 1000)
 }
+export const loadleaderboard = () => (dispatch) => {
+  dispatch(loadLeaderBoardReq())
+  setTimeout(() => {
+    const payload = [
+      {
+        pic: "https://cdn3.iconfinder.com/data/icons/avatars-round-flat/33/man4-128.png",
+        studentname: "Eswar",
+        score: 30,
+        id: 0,
+      },
+      {
+        pic: "https://cdn2.iconfinder.com/data/icons/avatars-2-7/128/16-512.png",
+        studentname: "Sai Krishna",
+        score: 29,
+        id: 1,
+      },
+      {
+        pic:
+          "https://cdn4.iconfinder.com/data/icons/occupation-and-people-avatar-vol-3-1/128/person_boy_student_male_people_avatar_hood-512.png",
+        studentname: "Ravi teja",
+        score: 28,
+        id: 2,
+      },
+    ]
+    dispatch(loadLeaderBoardSuccess(payload))
+  }, 1300)
+}
+
 
 export const loadMyCourses = () => (dispatch) => {
   dispatch(loadMyCoursesReq())
